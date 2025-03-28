@@ -21,6 +21,9 @@
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
 }
+.cardHeadingInputLabel {
+  cursor: pointer;
+}
 .cardHeadingInput {
   -webkit-appearance: none;
   border: 1px solid #cdcdcd;

@@ -17,6 +17,9 @@
   accent-color: #2469f6;
   position: relative;
 }
+.checkboxInputLabel {
+  cursor: pointer;
+}
 .checkboxInput:hover {
   border-color: #bdbdbd;
 }
@@ -35,6 +38,7 @@
 .checkboxInput:checked {
   background-color: #2469f6;
   border: 3px solid #2469f6;
+  transition: all 100ms;
 }
 .checkboxInput:checked::after {
   content: "";
@@ -46,4 +50,8 @@
   background-image: url("../../assets/icons/checkmark.svg");
   background-repeat: no-repeat;
   transform: translate(-50%, -50%);
+}
+.checkboxInput:hover:checked {
+  background-color: #5087f8;
+  border: 3px solid #5087f8;
 }

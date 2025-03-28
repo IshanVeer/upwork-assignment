@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import css from "./Checkbox.module.css";
 
-const Checkbox = ({ checkbox }) => {
+const Checkbox = ({ checkbox, isAllChecked }) => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const toggleIndividualCheckboxHandler = (event) => {
+    setIsChecked(event.target.checked);
+  };
   return (
     <div className={css.checkboxContainer}>
-      <label htmlFor={checkbox.id}>{checkbox.label}</label>
-      <input className={css.checkboxInput} id={checkbox.id} type="checkbox" />
+      <label className={css.checkboxInputLabel} htmlFor={checkbox.id}>
+        {checkbox.label}
+      </label>
+      <input
+        className={css.checkboxInput}
+        checked={isChecked || isAllChecked}
+        id={checkbox.id}
+        type="checkbox"
+        onChange={toggleIndividualCheckboxHandler}
+      />
     </div>
   );
 };
