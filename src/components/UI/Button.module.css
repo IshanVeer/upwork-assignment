@@ -6,4 +6,8 @@
   border: none;
   margin: 22px 0;
   cursor: pointer;
+  transition: all 150ms;
+}
+.button:hover {
+  background-color: #ffd84d;
 }
